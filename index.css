@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
+:root {
+    --main_bg: #3F8D41;
+    --montserrat: "Montserrat", sans-serif;
+    --kanitFont: "Kanit", sans-serif;
+}
+
+*::selection {
+    color: #fff;
+    background-color: #333333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: var(--montserrat);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /* font-family: var(--kanitFont); */
+    font-weight: 500;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 7px;
+}
+
+img, video {
+    width: 100%;
+    vertical-align: middle;
+}
+
+/* Target the specific number input and hide the spin buttons */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox, you may need this additional CSS rule */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+button {
+    border: none;
+    outline: none;
+    white-space: nowrap;
+    width: fit-content;
+    transition: opacity .2s ease-in-out;
+}
+
+button:hover {
+    opacity: .9;
+}
+
+button:disabled {
+    opacity: .5;
+}
+
+section {
+    position: relative;
+    z-index: 1;
+}
+
+.w-screen {
+    width: 100vw;
+}
+
+.max-w-full {
+    max-width: 100%;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.h-fit {
+    height: fit-content;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+.max-h-screen {
+    max-height: 100vh;
+}
+
+.fs-large {
+    font-size: 20px;
+}
+
+.fs-text {
+    font-size: 16px;
+}
+
+.fs-extralarge {
+    font-weight: 800;
+    font-size: clamp(70px, 10vw, 150px);
+}
+
+.lh-07 {
+    line-height: .7;
+}
+
+.main_spacer {
+    padding-block: 150px;
+}
+
+.medium_spacer {
+    padding-block: 100px;
+}
+
+.small_spacer {
+    padding-block: 70px;
+}
+
+.small_spacer_bottom {
+    padding-bottom: 70px;
+}
+
+.small_spacer_top {
+    padding-top: 70px;
+}
+
+.green_text {
+    color: var(--main_bg);
+}
+
+.bg_gray {
+    background-color: #F8F8F8;
+}
+
+.bg_main {
+    color: #fff;
+    background-color: var(--main_bg);
+}
+
+.hiphen::before {
+    content: "- ";
+}
+
+.hr-white {
+    margin-left: auto;
+    width: 90%;
+    border-top: 2 solid #fff;
+    opacity: 1;
+}
+
+.gray_text {
+    color: #D1D1D1;
+}
+
+/* Main */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    color: #fff;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo_wrapper {
+    max-width: 250px;
+}
+
+.main_section {
+    color: #fff;
+}
+
+.main_section .bg_wrapper {
+    inset: 0;
+    background-image: url("/assets/images/main.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    z-index: -1;
+}
+
+.main_section .container .content_wrapper {
+    width: 100%;
+    max-width: 700px;
+    padding-block: 100px;
+}
+
+.main_section .logos {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+}
+
+.main_section .logos .img_wrapper {
+    max-width: 150px;
+}
+
+.rotate {
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 400px;
+    left: 20px;
+}
+
+.attributes_section .rotate {
+    top: 500px;
+    left: -40px;
+}
+
+.rotate h4 {
+    position: relative;
+    color: rgba(161,161,161,1);
+}
+/* 
+.bg_main .rotate h4 {
+    color: #fff;
+}
+
+.bg_main .rotate h4::after {
+    background-color: #fff;
+} */
+
+.rotate h4::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 110%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 2px;
+    background-color: rgba(161,161,161,1);
+}
+
+.bg_fixed_section {
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+    height: 450px;
+    background-image: url("/assets/images/fixed-tanks.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.svgs_section .content_wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.stroke {
+    color: var(--main_bg);
+    text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff;
+    /* -webkit-text-stroke-width: 1px; */
+    /* -webkit-text-stroke-color: #fff; */
+}
+
+.mySwiper {
+    width: 100%;
+    height: 100%;
+}
+
+.mySwiper .swiper-pagination-bullet {
+    width: 13px;
+    height: 13px;
+    border: 1px solid rgba(112,112,112,1);
+    background: #fff;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+    background: rgba(112,112,112,1);
+    transform: scale(1.15);
+}
+
+.mySwiper .swiper-slide .content_wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.mySwiper .swiper-slide .logo_wrapper {
+    min-width: 250px;
+    filter: grayscale(1);
+}
+
+.gsapSwiper .swiper-slide {
+    transform: scale(.7);
+    color: rgba(112,112,112,1);
+    transition: transform .2s ease-in-out, filter .3s ease-in-out;
+}
+
+.gsapSwiper .swiper-slide-active {
+    transform: scale(1);
+    color: #000;
+}
+
+.images_section .grid {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 30px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.images_section .grid .ccard {
+    width: 100%;
+    height: 100%;
+    /* border-block: 4px solid var(--main_bg); */
+}
+
+.images_section .grid .ccard .content_wrapper {
+    width: 100%;
+    color: #fff;
+    display: flex;
+    align-items: end;
+    padding: 15px;
+    min-height: 400px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.images_section .grid .ccard .content_wrapper .img_wrapper {
+    position: absolute;
+    inset: 0;
+    background-color: #000;
+    background-blend-mode: overlay;
+}
+
+.images_section .grid .ccard .content_wrapper .img_wrapper img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.form_section .content_wrapper .icons_wrapper svg {
+    padding: 4px;
+    width: 35px;
+    height: 35px;
+    border: 2px solid var(--main_bg);
+}
+
+.form_section .form_wrapper form input, 
+.form_section .form_wrapper form textarea {
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    resize: none;
+}
+
+.form_section .form_wrapper form input::placeholder, 
+.form_section .form_wrapper form textarea::placeholder {
+    color: #fff;
+    opacity: .7;
+}
+
+.form_section .form_wrapper form button {
+    padding: 10px 0;  
+    position: relative;
+    background-color: transparent;
+}
+
+.form_section .form_wrapper form button::before,
+.form_section .form_wrapper form button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100px;
+    height: 1px;
+    background-color: #000;
+    transition: width .2s ease-in-out;
+}
+
+/* .form_section .form_wrapper form button::before {
+    background-color: #fff;
+    width: 0;
+}
+
+.form_section .form_wrapper form button:hover::before {
+    width: 100px;
+}
+
+.form_section .form_wrapper form button:hover::after {
+    width: 0;
+    right: 0;
+} */
+
+footer .logo_wrapper {
+    max-width: 250px;
+    filter: grayscale(1) brightness(10);
+}
