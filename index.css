@@ -203,10 +203,11 @@ header .logo_wrapper {
 
 .main_section .bg_wrapper {
     inset: 0;
+    background-color: rgba(0,0,0,0.6);
     background-image: url("/assets/images/main.png");
     background-repeat: no-repeat;
-    background-position: 0 0;
     background-size: cover;
+    background-blend-mode: overlay;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
     z-index: -1;
