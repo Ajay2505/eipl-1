@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
     <header>
         <div class="container">
             <div class="logo_wrapper">
@@ -17,11 +18,11 @@
                 </a>
             </div>
             <nav class="d-none d-lg-flex flex-row gap-4">
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Business</a>
-                <a href="#">Sustainabilities</a>
-                <a href="#">Contact</a>
+                <a class="underline" href="#">Home</a>
+                <a class="underline" href="#">About Us</a>
+                <a class="underline" href="#">Business</a>
+                <a class="underline" href="#">Sustainabilities</a>
+                <a class="underline" href="#">Contact</a>
             </nav>
         </div>
     </header>
@@ -149,8 +150,8 @@
                 </div>
                 <div class="col-lg-1"></div>
                 <div class="col-lg-7">
-                    <div class="d-flex align-items-end">    
-                        <h1 class="stroke fs-extralarge lh-07">150,000</h1>
+                    <div class="d-flex gap-1 align-items-end">    
+                        <h1 data-end-value="150000" data-increment="10" class="stroke fs-extralarge number-animate lh-07"></h1>
                         <p>MT</p>
                     </div>
                 </div>
@@ -280,33 +281,57 @@
             <h2 class="text-uppercase mb-lg-4 mb-2">Images</h2>
             <div class="grid">
                 <div class="ccard">
-                    <div style="background-image: url('/assets/images/grid.png');" class="content_wrapper">
+                    <div style="background-image: url('/assets/images/grid.png');" class="bg_wrapper">
                         <h2>Industry logistic solutions</h2>
+                        <div class="absolute_block">
+                            <h2>Industry logistic solutions</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum nesciunt architecto tempora voluptatum. Enim repellat maxime vitae iste obcaecati exercitationem, earum praesentium voluptatibus odio, commodi, at accusantium repellendus. Velit, modi.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="ccard">
-                    <div style="background-image: url('/assets/images/grid-2.png');" class="content_wrapper">
+                    <div style="background-image: url('/assets/images/grid-2.png');" class="bg_wrapper">
                         <h2>Industry logistic solutions</h2>
+                        <div class="absolute_block">
+                            <h2>Industry logistic solutions</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum nesciunt architecto tempora voluptatum. Enim repellat maxime vitae iste obcaecati exercitationem, earum praesentium voluptatibus odio, commodi, at accusantium repellendus. Velit, modi.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="ccard">
-                    <div style="background-image: url('/assets/images/grid-3.png');" class="content_wrapper">
+                    <div style="background-image: url('/assets/images/grid-3.png');" class="bg_wrapper">
                         <h2>Industry logistic solutions</h2>
+                        <div class="absolute_block">
+                            <h2>Industry logistic solutions</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum nesciunt architecto tempora voluptatum. Enim repellat maxime vitae iste obcaecati exercitationem, earum praesentium voluptatibus odio, commodi, at accusantium repellendus. Velit, modi.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="ccard">
-                    <div style="background-image: url('/assets/images/grid-4.png');" class="content_wrapper">
+                    <div style="background-image: url('/assets/images/grid-4.png');" class="bg_wrapper">
                         <h2>Industry logistic solutions</h2>
+                        <div class="absolute_block">
+                            <h2>Industry logistic solutions</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum nesciunt architecto tempora voluptatum. Enim repellat maxime vitae iste obcaecati exercitationem, earum praesentium voluptatibus odio, commodi, at accusantium repellendus. Velit, modi.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="ccard">
-                    <div style="background-image: url('/assets/images/grid-5.png');" class="content_wrapper">
+                    <div style="background-image: url('/assets/images/grid-5.png');" class="bg_wrapper">
                         <h2>Industry logistic solutions</h2>
+                        <div class="absolute_block">
+                            <h2>Industry logistic solutions</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum nesciunt architecto tempora voluptatum. Enim repellat maxime vitae iste obcaecati exercitationem, earum praesentium voluptatibus odio, commodi, at accusantium repellendus. Velit, modi.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="ccard">
-                    <div style="background-image: url('/assets/images/grid-6.png');" class="content_wrapper">
+                    <div style="background-image: url('/assets/images/grid-6.png');" class="bg_wrapper">
                         <h2>Industry logistic solutions</h2>
+                        <div class="absolute_block">
+                            <h2>Industry logistic solutions</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum nesciunt architecto tempora voluptatum. Enim repellat maxime vitae iste obcaecati exercitationem, earum praesentium voluptatibus odio, commodi, at accusantium repellendus. Velit, modi.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -417,6 +442,8 @@
     <script src="/lib/swiper/swiper-bundle.min.js"></script>
     <script src="/lib/gsap/gsap.min.js"></script>
     <script src="/lib/gsap/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
+

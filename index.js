@@ -72,83 +72,43 @@ const gsapSwiper = new Swiper(".gsapSwiper", {
 });
 
 
-// var pin = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: '.gsapSwiper',
-//       pin: true,
-//       start: 'top top',
-//       end: '+=100%', // Adjust as needed
-//       scrub: 1, // Adjust the scrubbing speed
-//     },
-// });
-
-// var scrollTimeout;
-
-// function handleScroll(direction) {
-//   clearTimeout(scrollTimeout);
-
-//   if (direction === 'up' && gsapSwiper.activeIndex > 0) {
-//     gsapSwiper.slidePrev();
-//   } else if (direction === 'down' && gsapSwiper.activeIndex < gsapSwiper.slides.length - 1) {
-//     gsapSwiper.slideNext();
-//   } else {
-//     // Release the pin if there are no more slides
-//     scrollTrigger.endTrigger.scroll();
-//   }
-
-//   // Adjust the timeout duration as needed
-//   scrollTimeout = setTimeout(function () {
-//     gsap.to(window, {
-//       scrollTo: { y: `+=${direction === 'up' ? '-' : ''}50%` },
-//       duration: 0.5,
-//       onComplete: function () {
-//         scrollTrigger.refresh();
-//       },
-//     });
-//   }, 500); // Delay before re-enabling scroll
-// }
-
-// // Listen for scroll events
-// window.addEventListener('wheel', function (event) {
-//   if (event.deltaY > 0) {
-//     handleScroll('down');
-//   } else if (event.deltaY < 0) {
-//     handleScroll('up');
-//   }
-// });
+document.querySelectorAll('.number-animate').forEach( (el) => {
+  const endValue = el.getAttribute('data-end-value');
+  const incrementValue = el.getAttribute('data-increment');
+  const durationValue = el.getAttribute('data-duration');
+  
+  ScrollTrigger.create({
+    trigger: el,
+    start: "top bottom",
+    end: "center center",
+    onEnter: () => {
+      if (endValue) numberAnimation(el, endValue, incrementValue, durationValue);
+    },
+  });
+  
+});
 
 
-// gsap.to(".testimonials_section", {
-//     scrollTrigger: {
-//         trigger: ".testimonials_section",
-//         pin: true,
-//         pinSpacer: true,
-//         start: "top top",
-//         end: 'center top',
-//         // markers: true,
-//     }
-// });
+function numberAnimation(el, endValue, incrementor, duration) {
+  anime({
+    targets: el,
+    textContent: endValue,
+    round: incrementor ? 1/incrementor : 1/5,
+    easing: 'easeInOutQuad',
+    duration: duration ? duration : 3000,
+  });
+}
 
-// let timer;
+const timeline = gsap.timeline();
 
-// const wheelHandler = (up) => {
-//     clearTimeout(timer);
-//     if (up) {   
-//         timer = setTimeout(() => {
-//             gsapSwiper.slideNext();
-//         }, 100);
-//     } else {
-//         timer = setTimeout(() => {
-//             gsapSwiper.slidePrev();
-//         }, 100);
-//     }
-// }
+timeline.to(".main_section .bg_wrapper", {
+    duration: 1,
+    clipPath: "polygon(0 0, 100% 0, 100% 80%, 0% 100%)"
+});
 
-// document.querySelector(".testimonials_section").addEventListener("wheel", evt => {
-//     if (evt.deltaY > 0) {
-//         wheelHandler(true);
-//     } else {
-//         wheelHandler(false);
-//     }
-//     // evt.preventDefault();
-// });
+// Add an animation to set the opacity to 1
+timeline.to(".main_section .logos .img_wrapper", {
+    opacity: 1,
+    duration: 1,
+    stagger: .3
+});
