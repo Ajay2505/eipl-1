@@ -27,6 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     color: inherit;
+    width: fit-content;
     text-decoration: none;
 }
 
@@ -208,6 +209,10 @@ section {
     width: 100%;
 }
 
+.underline.dark::after {
+    background-color: #000;
+}
+
 /* Main */
 header {
     position: absolute;
@@ -226,7 +231,7 @@ header .container {
 }
 
 header .logo_wrapper {
-    max-width: 250px;
+    max-width: 200px;
 }
 
 .main_section {
@@ -273,9 +278,9 @@ header .logo_wrapper {
 
 .rotate {
     position: absolute;
-    transform: rotate(-90deg);
     top: 400px;
     left: 20px;
+    transform: rotate(-90deg);
 }
 
 .attributes_section .rotate {
@@ -418,6 +423,7 @@ header .logo_wrapper {
     right: 0;
     padding: 20px;
     bottom: -200%;
+    z-index: 1;
     background-color: var(--main_bg);
     transition: bottom .3s ease-in-out;
 }
@@ -461,33 +467,10 @@ header .logo_wrapper {
     background-color: transparent;
 }
 
-.form_section .form_wrapper form button::before,
-.form_section .form_wrapper form button::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0px;
-    width: 100px;
-    height: 1px;
-    background-color: #000;
-    transition: width .2s ease-in-out;
-}
-
-/* .form_section .form_wrapper form button::before {
-    background-color: #fff;
-    width: 0;
-}
-
-.form_section .form_wrapper form button:hover::before {
-    width: 100px;
-}
-
-.form_section .form_wrapper form button:hover::after {
-    width: 0;
-    right: 0;
-} */
-
 footer .logo_wrapper {
-    max-width: 250px;
-    filter: grayscale(1) brightness(10);
+    max-width: 200px;
+}
+
+.op_timeline {
+    opacity: 0;
 }

@@ -101,14 +101,17 @@ function numberAnimation(el, endValue, incrementor, duration) {
 
 const timeline = gsap.timeline();
 
+timeline.to(".op_timeline", {
+    opacity: 1,
+    stagger: .5 
+});
+
 timeline.to(".main_section .bg_wrapper", {
-    duration: 1,
+    duration: .7,
     clipPath: "polygon(0 0, 100% 0, 100% 80%, 0% 100%)"
 });
 
-// Add an animation to set the opacity to 1
 timeline.to(".main_section .logos .img_wrapper", {
     opacity: 1,
-    duration: 1,
     stagger: .3
 });
