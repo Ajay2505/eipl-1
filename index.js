@@ -29,7 +29,7 @@ animationConfigurations.forEach((config) => {
   });
   animations.push({ element, animation });
 });
-      
+     
 function playAnimation(entries, observer) {
   entries.forEach((entry) => {
     animations.forEach((anim) => {
